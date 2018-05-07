@@ -1,0 +1,21 @@
+<head>
+<meta charset="utf-8"/>
+</head>
+<body ng-app="myApp" ng-controller="TerrainController">
+     <div class="col-md-6 col-sm-6 spacer">
+        <table class="table table-striped">
+			<thead>
+				<tr>
+				  <th>Type</th><th>description</th><th>photo</th><th>prix</th><th>See schedule of id</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <tr  ng-repeat="e in pageTerrains.content">
+				  <td>{{e[1].type}}</td>
+				  <td>{{e[2]}}</td>
+				  <td><button ng-click="Reserver(e[1].idTerrain)">Reserver</button></td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+</body>
